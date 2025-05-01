@@ -6,6 +6,7 @@
     <title>Choice Spice International</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         body {
           font-family: 'Open Sans', sans-serif;
@@ -31,17 +32,33 @@
           color: #333;
           font-weight: 600;
         }
-        .hero {
-          text-align: center;
-          padding: 60px 20px;
-          background: #f0f9f4;
+        .swiper {
+          width: 100%;
+          height: 500px;
         }
-        .hero h1 {
-          font-size: 2.5rem;
-          margin-bottom: 10px;
+        .swiper-slide {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 40px;
+          background: #f0f0f0;
         }
-        .hero p {
-          font-size: 1.2rem;
+        .swiper-slide img {
+          width: 45%;
+          border-radius: 12px;
+        }
+        .slide-text {
+          width: 50%;
+        }
+        .slide-text h2 {
+          font-size: 2rem;
+          color: #2e7d32;
+          margin-bottom: 1rem;
+        }
+        .slide-text p {
+          font-size: 1.1rem;
+          line-height: 1.6;
         }
         section {
           padding: 40px 20px;
@@ -52,20 +69,6 @@
           text-align: center;
           font-size: 2rem;
           margin-bottom: 1rem;
-        }
-        ul.products {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-          gap: 20px;
-          list-style: none;
-          padding: 0;
-        }
-        ul.products li {
-          background: #f8f8f8;
-          padding: 20px;
-          text-align: center;
-          border-radius: 8px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .contact p {
           text-align: center;
@@ -90,28 +93,67 @@
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Your Trusted Agro Trading Partner</h1>
-    <p>We export premium agricultural products sourced from Nigeria.</p>
-</section>
+<!-- Swiper Slider -->
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Cassia Tora</h2>
+                <p>Known for its medicinal and industrial value, Cassia Tora seeds are exported with the highest quality standards from Nigeria.</p>
+            </div>
+            <img src="assets/cassia-tora.jpg" alt="Cassia Tora">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Sesame Seeds</h2>
+                <p>High in oil content, our sesame seeds are carefully selected and exported to meet global demand with quality assurance.</p>
+            </div>
+            <img src="assets/sesame.jpg" alt="Sesame Seeds">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Peanuts</h2>
+                <p>Rich in protein and widely used in food industries. Our peanuts are sourced from the best Nigerian farms.</p>
+            </div>
+            <img src="assets/peanuts.jpg" alt="Peanuts">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Pigeon Peas</h2>
+                <p>A staple legume with a global export market, known for its nutritional and culinary value.</p>
+            </div>
+            <img src="assets/pigeon-peas.jpg" alt="Pigeon Peas">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Gum Arabic</h2>
+                <p>Harvested naturally from acacia trees, Gum Arabic is a key export for pharmaceutical and food applications.</p>
+            </div>
+            <img src="assets/gum-arabic.jpg" alt="Gum Arabic">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Hibiscus</h2>
+                <p>Bright red petals, rich in flavor and antioxidants. Sourced responsibly and exported worldwide.</p>
+            </div>
+            <img src="assets/hibiscus.jpg" alt="Hibiscus">
+        </div>
+        <div class="swiper-slide">
+            <div class="slide-text">
+                <h2>Mung Beans</h2>
+                <p>Mung beans are rich in protein and widely consumed globally. We supply premium-grade mung beans for export.</p>
+            </div>
+            <img src="assets/mung-beans.jpg" alt="Mung Beans">
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
 
 <section id="about">
     <h2>About Us</h2>
     <p style="text-align:center; max-width: 800px; margin: 0 auto;">
         Choice Spice International is a leading agro-trading company focused on delivering high-quality crops such as Cassia Tora, Sesame, Peanuts, Pigeon Peas, Gum Arabic, and Hibiscus. Our sourcing is direct from Nigerian farms, ensuring top-grade supply and reliable international delivery.
     </p>
-</section>
-
-<section id="products">
-    <h2>Our Products</h2>
-    <ul class="products">
-        <li>Cassia Tora</li>
-        <li>Sesame Seeds</li>
-        <li>Peanuts</li>
-        <li>Pigeon Peas</li>
-        <li>Gum Arabic</li>
-        <li>Hibiscus</li>
-    </ul>
 </section>
 
 <section id="contact" class="contact">
@@ -123,5 +165,19 @@
 <footer>
     <p>&copy; 2025 Choice Spice International. All rights reserved.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+      },
+    });
+</script>
 </body>
 </html>
