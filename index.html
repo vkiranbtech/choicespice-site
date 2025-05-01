@@ -1,52 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Choice Spice International</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" />
+    <style>
+        body {
+          font-family: 'Open Sans', sans-serif;
+          margin: 0;
+          padding: 0;
+          color: #333;
+          background-color: #fff;
+        }
+        header {
+          background-color: #fafafa;
+          border-bottom: 1px solid #ddd;
+          padding: 1rem 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        header img {
+          height: 50px;
+        }
+        nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #333;
+          font-weight: 600;
+        }
+        .hero {
+          text-align: center;
+          padding: 60px 20px;
+          background: #f0f9f4;
+        }
+        .hero h1 {
+          font-size: 2.5rem;
+          margin-bottom: 10px;
+        }
+        .hero p {
+          font-size: 1.2rem;
+        }
+        section {
+          padding: 40px 20px;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+        h2 {
+          text-align: center;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+        ul.products {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 20px;
+          list-style: none;
+          padding: 0;
+        }
+        ul.products li {
+          background: #f8f8f8;
+          padding: 20px;
+          text-align: center;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .contact p {
+          text-align: center;
+          font-size: 1.1rem;
+        }
+        footer {
+          background: #f5f5f5;
+          text-align: center;
+          padding: 20px;
+          font-size: 0.9rem;
+          color: #666;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="assets/landscape_logo.png" alt="Choice Spice Logo" class="logo">
-        <nav>
-            <a href="#about">About</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <img src="assets/landscape_logo.png" alt="Choice Spice Logo">
+    <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <h1>Your Trusted Agro Trading Partner</h1>
-        <p>Sourcing premium agricultural products from Nigeria to the world.</p>
-    </section>
+<section class="hero">
+    <h1>Your Trusted Agro Trading Partner</h1>
+    <p>We export premium agricultural products sourced from Nigeria.</p>
+</section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Choice Spice International specializes in trading high-quality agricultural products such as Cassia Tora, Sesame Seeds, Peanuts, Pigeon Peas, Gum Arabic, and Hibiscus. We source directly from farms in Nigeria, ensuring freshness, quality, and sustainability.</p>
-    </section>
+<section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width: 800px; margin: 0 auto;">
+        Choice Spice International is a leading agro-trading company focused on delivering high-quality crops such as Cassia Tora, Sesame, Peanuts, Pigeon Peas, Gum Arabic, and Hibiscus. Our sourcing is direct from Nigerian farms, ensuring top-grade supply and reliable international delivery.
+    </p>
+</section>
 
-    <section id="products">
-        <h2>Our Products</h2>
-        <ul>
-            <li>Cassia Tora</li>
-            <li>Sesame Seeds</li>
-            <li>Peanuts</li>
-            <li>Pigeon Peas</li>
-            <li>Gum Arabic</li>
-            <li>Hibiscus</li>
-        </ul>
-    </section>
+<section id="products">
+    <h2>Our Products</h2>
+    <ul class="products">
+        <li>Cassia Tora</li>
+        <li>Sesame Seeds</li>
+        <li>Peanuts</li>
+        <li>Pigeon Peas</li>
+        <li>Gum Arabic</li>
+        <li>Hibiscus</li>
+    </ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@choicespice.com</p>
-        <p>WhatsApp: +234-XXX-XXX-XXXX</p>
-    </section>
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@choicespice.com</p>
+    <p>WhatsApp: +234-XXX-XXX-XXXX</p>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Choice Spice International. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Choice Spice International. All rights reserved.</p>
+</footer>
 </body>
 </html>
